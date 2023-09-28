@@ -79,6 +79,12 @@ document.getElementById('previous-btn')
 
 function tarjetaPokemon(pokemon) {
     const card = document.getElementById('perfilPokemon');
+
+    while (card.firstChild) {
+        card.removeChild(card.firstChild);
+    }
+
+
     const nombrePokemon = document.createElement('h2');
     nombrePokemon.textContent = `Nombre: ${pokemon.name}`;
     const idPokemon = document.createElement('p');
